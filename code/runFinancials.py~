@@ -1,0 +1,6 @@
+from stock.commands import Financials, AmericanStockDaily, DailyInformation
+from stock.streams.mysql import DB
+
+#DailyInformation().run()
+AmericanStockDaily(DB(DB.Connections.STOCK)).run()
+#Financials().run()

@@ -1,0 +1,3 @@
+from XECurrencyController import XECurrencyController
+from BloombergCommoditiesController import BloombergCommoditiesController
+from KitcoMetalsController import KitcoMetalsController

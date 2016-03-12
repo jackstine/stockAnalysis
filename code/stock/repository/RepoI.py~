@@ -1,0 +1,13 @@
+from . import Repo
+
+class RepoI(Repo):
+
+    def __init__(self, table*, db, *kargs):
+        Repo.__init__(self, table, **kwargs)
+        self.table = table
+
+    def selectAll(self):
+        return Repo.selectAll(self, self.db)
+
+    def selectAllIn(self, listIn, primaryKey):
+        return 

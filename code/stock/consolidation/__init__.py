@@ -1,0 +1,1 @@
+from PriceCon import consolidatePrices

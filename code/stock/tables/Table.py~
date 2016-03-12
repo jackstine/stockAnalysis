@@ -1,0 +1,59 @@
+from ..repository.table import TableRepo
+from .Field import Field
+from .TableDescription import TableDescription
+from .sort import LogicalSort
+
+class Table:
+
+    def __init__(self, name, rows, fields):
+        self.collections = []
+        self.fields = fields
+        self._setFields(fields)
+        self._setCollections(rows)
+        self.name = name
+
+    def getRows(self):
+        if (self.collections):
+            pass
+        else:
+            self.getData()
+            return self.getRows()
+
+    def getCollections(self):
+        return self.collections
+
+    def getFields(self):
+        return self.fields
+
+    def getColumn(self, index):
+        column = []
+        for c in self.getCollections():
+            column.extend(c.getColumn(index))
+        return column
+
+    def getFieldIndex(self, fieldName):
+        fieldName = fieldName.lower()
+        for f in self.fields:
+            if (f.getName() == fieldName):
+                return f.getIndex()
+
+    def perform(self, op):
+        self._addField(op.name)
+        op.perform(self)
+
+    def _addField(self, field):
+        self.fields.append(field)
+
+    def _setCollections(self, rows):
+    fieldIndex = 0
+    sortedValue = rows[0][fieldIndex]
+    rowsForCollection = []
+    for r in rows:
+        if (sortedValue != r[fieldIndex]):
+            sortedValue = r[fieldIndex]
+            c = Collection(table, rowsForCollection)
+            rowsForCollection = []
+            rowsForCollection.append(self.typeify(r))
+            yield c
+        else:
+            rowsForCollection.append(self.typeify(r))

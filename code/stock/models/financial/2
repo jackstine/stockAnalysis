@@ -1,0 +1,65 @@
+class FinancialModel:
+    
+
+def __init__(self, symbol, date, cashEquivalents, shortTermInvestments, totalReceivablesNet, 
+        totalInventory, totalCurrentAssets, propertyPlantEquipmentTotalGross, accumulatedDepreciationTotal, 
+        longTermInvestments, totalAssets, accountsPayable, totalCurrentLiabilities, totalLongTermDebt, 
+        totalDebt, minorityInterest, totalLiabilities, preferredStockNonRedeemableNet, additionalPaidInCapital, 
+        commonStockTotal, treasuryStockCommon, otherEquityTotal, totalEquity, depreciationDepletion, 
+        amortization, deferredTaxes, cashfromOperatingActivities, capitalExpenditures, cashfromInvestingActivities, 
+        cashfromFinancingActivities, totalCashDividendsPaid, issuanceRetirementofStockNet, 
+        issuanceRetirementofDebtNet, cashfromFinancingActivities, cashInterestPaidSupplemental, cashTaxesPaidSupplemental, 
+        revenue, totalRevenue, costOfRevenueTotal, grossProfit, sellingGeneralAdminExpensesTotal, 
+        ResearchDevelopment, depreciationAmortization, InterestExpenseIncomeNetOperating, totalOperatingExpense, 
+        operatingIncome, gainLossOnSaleOfAssets, incomeBeforeTax, netIncome, preferredDividends):
+
+        self.symbol = symbol
+        self.date = date
+        self.cashEquivalents = cashEquivalents
+        self.shortTermInvestments = shortTermInvestments
+        self.totalReceivablesNet = totalReceivablesNet
+        self.totalInventory = totalInventory
+        self.totalCurrentAssets = totalCurrentAssets
+        self.propertyPlantEquipmentTotalGross = propertyPlantEquipmentTotalGross
+        self.accumulatedDepreciationTotal = accumulatedDepreciationTotal
+        self.longTermInvestments = longTermInvestments
+        self.totalAssets = totalAssets
+        self.accountsPayable = accountsPayable
+        self.totalCurrentLiabilities = totalCurrentLiabilities
+        self.totalLongTermDebt = totalLongTermDebt
+        self.totalDebt = totalDebt
+        self.minorityInterest = minorityInterest
+        self.totalLiabilities = totalLiabilities
+        self.preferredStockNonRedeemableNet = preferredStockNonRedeemableNet
+        self.additionalPaidInCapital = additionalPaidInCapital
+        self.commonStockTotal = commonStockTotal
+        self.treasuryStockCommon = treasuryStockCommon
+        self.otherEquityTotal = otherEquityTotal
+        self.totalEquity = totalEquity
+        self.depreciationDepletion = depreciationDepletion
+        self.amortization = amortization
+        self.deferredTaxes = deferredTaxes
+        self.cashfromOperatingActivities = cashfromOperatingActivities
+        self.capitalExpenditures = capitalExpenditures
+        self.cashfromInvestingActivities = cashfromInvestingActivities
+        self.cashfromFinancingActivities = cashfromFinancingActivities
+        self.totalCashDividendsPaid = totalCashDividendsPaid
+        self.issuanceRetirementofStockNet = issuanceRetirementofStockNet
+        self.issuanceRetirementofDebtNet = issuanceRetirementofDebtNet
+        self.cashfromFinancingActivities = cashfromFinancingActivities
+        self.cashInterestPaidSupplemental = cashInterestPaidSupplemental
+        self.cashTaxesPaidSupplemental = cashTaxesPaidSupplemental
+        self.revenue = revenue
+        self.totalRevenue = totalRevenue
+        self.costOfRevenueTotal = costOfRevenueTotal
+        self.grossProfit = grossProfit
+        self.sellingGeneralAdminExpensesTotal = sellingGeneralAdminExpensesTotal
+        self.ResearchDevelopment = ResearchDevelopment
+        self.depreciationAmortization = depreciationAmortization
+        self.InterestExpenseIncomeNetOperating = InterestExpenseIncomeNetOperating
+        self.totalOperatingExpense = totalOperatingExpense
+        self.operatingIncome = operatingIncome
+        self.gainLossOnSaleOfAssets = gainLossOnSaleOfAssets
+        self.incomeBeforeTax = incomeBeforeTax
+        self.netIncome = netIncome
+        self.preferredDividends = preferredDividends

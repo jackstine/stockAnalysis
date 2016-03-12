@@ -1,0 +1,38 @@
+from stock.streams.mysql import DB,Query
+from stock.tables import Table
+
+db = DB(DB.Connections.STOCK)
+q = Query(db)
+q.add("GoogleAnnualIncomeStatements")
+q.add("GoogleAnnualBalanceSheets")
+q.remove("GoogleAnnualBalanceSheets", "symbol")
+q.remove("GoogleAnnualBalanceSheets", "date")
+q.add("GoogleAnnualCashFlowStatements")
+q.remove("GoogleAnnualCashFlowStatements", "symbol")
+q.remove("GoogleAnnualCashFlowStatements", "date")
+query = "SELECT " + q.build() + " FROM GoogleAnnualCashFlowStatements, GoogleAnnualBalanceSheets, GoogleAnnualIncomeStatements "
+query += "WHERE GoogleAnnualCashFlowStatements.symbol = GoogleAnnualBalanceSheets.symbol "
+query += "AND GoogleAnnualIncomeStatements.symbol = GoogleAnnualBalanceSheets.symbol "
+query += "AND GoogleAnnualIncomeStatements.symbol = GoogleAnnualCashFlowStatements.symbol "
+query += "AND GoogleAnnualCashFlowStatements.date = GoogleAnnualBalanceSheets.date "
+query += "AND GoogleAnnualIncomeStatements.date = GoogleAnnualBalanceSheets.date "
+query += "AND GoogleAnnualIncomeStatements.date = GoogleAnnualCashFlowStatements.date LIMIT 100"
+
+cur = db.executeQuery(query)
+
+google = open("GoogleBase.csv", 'w')
+fields = q.getFields()
+count = 0
+while(True):
+    if (count == 0):
+        rows = fields
+    else:
+        rows = cur.fetchone()
+    if (rows == None):
+        break
+    for r in rows:
+        google.write(str(r) + ",")
+    google.write("\n")
+    count += 1
+
+google.close()

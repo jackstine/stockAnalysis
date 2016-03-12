@@ -1,0 +1,7 @@
+symbol    response.xpath('//div[@id = "content"]/div[@class="qbreadcrumb"]/span/b/text()').extract()
+Exchange   response.xpath('//div[@id = "qwidget-sector-wrap"]/span/text()').extract()
+Industry  response.xpath('//div[@id = "qwidget-sector-wrap"]/span/a/text()').extract()
+headers   response.xpath('//div[@id = "qwidget-sector-wrap"]/span/a/text()').extract()
+todaysHL and Volume  response.xpath('//div[@id = "qwidget-sector-wrap"]/span/a/text()').extract()
+
+
