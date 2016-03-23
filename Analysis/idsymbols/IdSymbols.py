@@ -1,4 +1,4 @@
-from sql.Con import con
+from Analysis.sql.Con import con
 
 
 def get_id_symbols():

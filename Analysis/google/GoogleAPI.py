@@ -1,5 +1,5 @@
-from sql.Con import con
-from financial import Financial as f
+from Analysis.financial import FinancialModel as f
+from Analysis.sql.Con import con
 
 def get_google_annual_financials(id):
     income = get_google_financial_annual_income_statement(id)

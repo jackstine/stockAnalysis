@@ -1,7 +1,7 @@
-from sql.Con import con
-from splits import SplitAPI
-from pricing import PriceModel as pm
-from splits import SplitsModel as spm
+from Analysis.sql.Con import con
+from Analysis.splits import SplitAPI
+from Analysis.pricing import PriceModel as pm
+from Analysis.splits import SplitsModel as spm
 import time
 
 def get_price_of_id(id):
