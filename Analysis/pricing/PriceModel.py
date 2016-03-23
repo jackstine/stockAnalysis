@@ -1,0 +1,28 @@
+PRICE = "quote"
+ADJUSTED_PRICE = "adjustPrice"
+DATE = "date"
+RATIO = "ratio"
+
+
+
+
+ONE_WEEK = 5
+ONE_MONTH = 22
+TWO_MONTHS = 44
+ONE_QUARTER = 66
+TWO_QUARTERS = ONE_QUARTER * 2
+THREE_QUARTERS = TWO_QUARTERS + ONE_QUARTER
+ONE_YEAR = TWO_QUARTERS * 2
+ONE_HALF_YEAR = ONE_YEAR + TWO_QUARTERS
+TWO_YEARS = ONE_YEAR * 2
+THREE_YEARS = TWO_YEARS + ONE_YEAR
+FOUR_YEARS = TWO_YEARS * 2
+FIVE_YEARS = ONE_YEAR * 5
+SIX_YEARS = ONE_YEAR * 6
+SEVEN_YEARS = ONE_YEAR * 7
+EIGHT_YEARS = ONE_YEAR * 8
+NINE_YEARS = ONE_YEAR * 9
+TEN_YEARS = ONE_YEAR * 10
+TERMS = {"one_week":ONE_WEEK,"one_month":ONE_MONTH,"two_months":TWO_MONTHS,"one_quarter": ONE_QUARTER, "two_quarters":TWO_QUARTERS, "three_quarters":THREE_QUARTERS
+    ,"one_year":ONE_YEAR, "one_half_year":ONE_HALF_YEAR, "two_years":TWO_YEARS, "three_years":THREE_YEARS, "four_years":FOUR_YEARS, "five_years":FIVE_YEARS
+    ,"six_years":SIX_YEARS, "seven_years":SEVEN_YEARS,"eight_years":EIGHT_YEARS,"nine_years":NINE_YEARS,"ten_years":TEN_YEARS}
