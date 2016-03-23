@@ -1,5 +1,7 @@
 ID = "id"
 DATE = "date"
+
+# BALANCE SHEET FIELDS
 CASH_BALANCE = "cash_balance"
 SHORT_TERM_INVESTMENTS = "short_term_investments"
 ACCOUNTS_RECEIVABLE = "accounts_receivable"
@@ -25,7 +27,7 @@ RETAINED_EARNINGS = "retained_earnings"
 TREASURY_STOCK = "treasury_stock"
 TOTAL_EQUITY = "total_equity"
 
-
+# INCOME STATEMENT FIELDS
 REVENUE = "revenue"
 COST_OF_REVENUE = "cost_of_revenue"
 GROSS_PROFIT = "gross_profit"
@@ -42,12 +44,11 @@ INCOME_AFTER_TAX = "income_after_tax"
 MINORITY_INTEREST = "minority_interest"
 AFFILIATES = "affiliates"
 OTHER_ITEMS = "other_items"
-NET_INCOME = "net_income"
+NET_INCOME_IN_STATE = "net_income_income_state"
 PREFERRED_DIVIDENDS = "preferred_dividends"
 
 
-
-
+# CASH FLOW FIELDS
 NET_INCOME_CASH_FLOW = "net_income_cash_flow"
 DEPRECIATION_CASH_FLOW = "depreciation_cash_flow"
 AMORTIZATION = "amortization"
@@ -66,3 +67,31 @@ CASH_FINANCING = "cash_financing"
 NET_CHANGE_IN_CASH = "net_change_in_cash"
 CASH_INTEREST_PAID = "cash_interst_paid"
 CASH_TAXES_PAID = "cash_taxes_paid"
+
+
+#The Following are
+RETURN_ON_ASSETS = "return_on_assets"
+DIVIDEND_PAYOUT_RATIO = "dividend_payout_ratio"
+GROSS_PROFIT_MARGIN = "gross_profit_margin"
+NET_PROFIT_MARGIN = "net_profit_margin"
+RETURN_ON_EQUITY = "return_on_equity"
+GOODWILL_EQUITY = "goodwill_equity"
+ASSET_TURNOVER = "asset_turnover"
+INVENTORY_TURNOVER = "inventory_turnover"
+DEBT_RATIO = "debt_ratio"
+DEBT_INCOME_RATIO = "debt_income_ratio"
+DEBT_OPERATING_CASH_CASH_RATIO = "debt_to_operating_cash_ratio"
+DEBT_OPERATING_INCOME_RATIO = "debt_to_operating_income_ratio"
+DEBT_EQUITY_RATIO = "debt_to_equity_ratio"
+ACID_TEST_RATIO = "Acid_test_ratio"
+INTEREST_COVERAGE = "interest_coverage"
+FIXED_OPERATING_CASH = "fixed_operating_cash"    # operating Cash - working Capital
+DEBT_FIXED_OPERATING_CASH = "debt_to_fixed_operating_cash"
+CURRENT_RATIO = "current_ratio"
+QUICK_RATIO = "quick_ratio"
+CASH_RATIO = "cash_ratio"
+RECEIVABLES_TURNOVER = "receivable_turnover"
+OPERATING_CASH_FLOW_RATIO = "operating_cash_flow_ratio"
+
+
+

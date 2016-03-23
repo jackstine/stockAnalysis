@@ -1,11 +1,15 @@
 from Analysis.financial import FinancialModel as f
 from Analysis.sql.Con import con
+import pandas as pd
 
+#this will return the data frame of the id used here
 def get_google_annual_financials(id):
     income = get_google_financial_annual_income_statement(id)
     balance = get_google_financial_annual_balance_sheets(id)
     cash = get_google_financial_annual_cash_flow_statements(id)
-    #TODO merge them all into one
+    merged = pd.merge(income, balance,how = "outer", on = f.DATE)
+    finalMerged = pd.merge(cash, merged, how = 'outer', on = f.DATE)
+    return finalMerged
 
 
 def get_google_annual_income_statements(id):
@@ -28,8 +32,7 @@ def get_google_financial_annual_cash_flow_statements(id):
 
 
 def map_google_financial_balance_annual(goog):
-    #TODO create the dataFrame df
-    df = dict()
+    df = pd.DataFrame()
     df[f.ID] = goog["id"]
     df[f.DATE] = goog["date"]
     df[f.CASH_BALANCE] = goog["cashEquivalents"]
@@ -60,8 +63,7 @@ def map_google_financial_balance_annual(goog):
 
 
 def map_google_financial_income_annual(goog):
-    #TODO create the dataFrame df
-    df = dict()
+    df = pd.DataFrame()
     df[f.ID] = goog["id"]
     df[f.DATE] = goog["date"]
     df[f.REVENUE] = goog["totalRevenue"]
@@ -81,16 +83,17 @@ def map_google_financial_income_annual(goog):
     df[f.MINORITY_INTEREST] = goog["minorityInterest"]
     df[f.AFFILIATES] = goog["equityInAffiliates"]
     df[f.OTHER_ITEMS] = goog["discontinuedOperations"] + goog["accountingChange"] + goog["extraordinaryItem"]
-    df[f.NET_INCOME] = goog["netIncome"]
+    df[f.NET_INCOME_IN_STATE] = goog["netIncome"]
     df[f.PREFERRED_DIVIDENDS] = goog["preferredDividends"]
     return df
 
 
 
 def map_google_financial_cash_flow_annual(goog):
-    #TODO create dataFrame
-    df = dict()
-    df[f.NET_INCOME] = goog["netIncomeStartingLine"]
+    df = pd.DataFrame()
+    df[f.ID] = goog["id"]
+    df[f.DATE] = goog["date"]
+    df[f.NET_INCOME_CASH_FLOW] = goog["netIncomeStartingLine"]
     df[f.DEPRECIATION_CASH_FLOW] = goog["depreciationDepletion"]
     df[f.AMORTIZATION] = goog["amortization"]
     df[f.DEFERRED_TAXES] = goog["deferredTaxes"]

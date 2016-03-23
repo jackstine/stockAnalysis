@@ -2,6 +2,7 @@ from Analysis.idsymbols import IdSymbols as IDapi
 from Analysis.splits import SplitAPI
 from Analysis.pricing import PriceAPI
 from Analysis.google import GoogleAPI
+from Analysis.financial import FinancialAPI
 import datetime
 import pandas
 from Analysis.common import Time
@@ -10,10 +11,8 @@ from Analysis.common import Time
 
 
 
-print GoogleAPI.get_google_annual_balance_sheet(2)
-print GoogleAPI.get_google_annual_cash_flow_statements(2)
-print GoogleAPI.get_google_annual_income_statements(2)
-
+df = GoogleAPI.get_google_annual_financials(2)
+FinancialAPI.transform_financials(df)
 
 # cocaCola = 3677
 
