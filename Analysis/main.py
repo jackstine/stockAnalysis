@@ -13,6 +13,7 @@ from Analysis.common import Time
 
 df = GoogleAPI.get_google_annual_financials(2)
 FinancialAPI.transform_financials(df)
+print df
 
 # cocaCola = 3677
 

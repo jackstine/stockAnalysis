@@ -8,14 +8,15 @@ import FinancialModel as f
 def transform_financials(fin):
     fin[f.RETURN_ON_ASSETS] = fin[f.NET_INCOME_IN_STATE] / fin[f.TOTAL_ASSETS]
     fin[f.DIVIDEND_PAYOUT_RATIO] = fin[f.DIVIDENDS] / fin[f.NET_INCOME_IN_STATE]
-    fin[f.GROSS_PROFIT_MARGIN] = (fin[f.REVENUE] - fin[f.COST_OF_REVENUE]) / fin[f.REVENUE]
-    fin[f.NET_PROFIT_MARGIN] = fin[f.NET_INCOME_IN_STATE] / fin[f.REVENUE]
+    fin[f.GROSS_MARGIN] = (fin[f.REVENUE] - fin[f.COST_OF_REVENUE]) / fin[f.REVENUE]
+    fin[f.OPERATING_MARGIN] = fin[f.OPERATING_INCOME] / fin[f.REVENUE]
+    fin[f.PROFIT_MARGIN] = fin[f.NET_INCOME_IN_STATE] / fin[f.REVENUE]
     fin[f.RETURN_ON_EQUITY] = fin[f.NET_INCOME_IN_STATE] / fin[f.TOTAL_EQUITY]
     fin[f.GOODWILL_EQUITY] = fin[f.GOODWILL] / fin[f.TOTAL_EQUITY]
     fin[f.ASSET_TURNOVER] = fin[f.REVENUE] / fin[f.TOTAL_ASSETS]
     fin[f.INVENTORY_TURNOVER] = fin[f.REVENUE] / fin[f.INVENTORY]
     # TODO decide if I want to user DEBT or TOTAL_LIABILITY
-    fin[f.DEBT_RATIO] = fin[f.DEBT] / fin[f.TOTAL_ASSETS]
+    fin[f.DEBT_RATIO] = fin[f.TOTAL_LIABILITY] / fin[f.TOTAL_ASSETS]
     fin[f.DEBT_OPERATING_CASH_CASH_RATIO] = fin[f.DEBT] / fin[f.CASH_OPERATING]
     fin[f.DEBT_OPERATING_INCOME_RATIO] = fin[f.DEBT] / fin[f.OPERATING_INCOME]
     fin[f.DEBT_INCOME_RATIO] = fin[f.DEBT] / fin[f.NET_INCOME_IN_STATE]
@@ -30,6 +31,7 @@ def transform_financials(fin):
     fin[f.CASH_RATIO] = ( fin[f.CASH_BALANCE] + fin[f.SHORT_TERM_INVESTMENTS] ) / fin[f.CURRENT_LIABILITIES]
     fin[f.RECEIVABLES_TURNOVER] = fin[f.REVENUE] / fin[f.ACCOUNTS_RECEIVABLE]   # NOTE should be credit Revenue
     fin[f.OPERATING_CASH_FLOW_RATIO] = fin[f.CASH_OPERATING] / fin[f.DEBT]
+
 
 
     # Weighted Average Cost of Capital
