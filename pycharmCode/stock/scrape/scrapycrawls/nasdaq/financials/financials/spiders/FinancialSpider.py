@@ -1,24 +1,17 @@
-import sys, os, inspect, string
+import inspect
+import os
+import string
+import sys
 
 THIS_FILE_DIR = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe()))) # script directory
 DEFAULT_PATH = string.join(THIS_FILE_DIR.split("/")[:-7],"/")
 print DEFAULT_PATH
 sys.path.insert(1,DEFAULT_PATH)
-from stock.common.utility import Filter
-from stock.controllers.financials import FinancialController
-from stock.streams.models import InsertModel
-from stock.scrape import StockScrapy
+from pycharmCode.stock.controllers.financials import FinancialController
+from pycharmCode.stock.streams.models import InsertModel
+from pycharmCode.stock.scrape import StockScrapy
 
-from scrapy import Spider
-import string,scrapy,os,datetime
-from financials.IncomeItem import IncomeItem
-from financials.BalanceItem import BalanceItem
-from financials.CashItem import CashItem
-from .state import FinancialState, IncomeState, BalanceState, CashState
-import operator
-
-from scrapy import signals
-from scrapy.xlib.pydispatch import dispatcher
+from .state import IncomeState, BalanceState, CashState
 
 
 class FinancialSpider(StockScrapy):

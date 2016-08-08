@@ -1,6 +1,6 @@
 from stock.repository import Repo
 from stock.streams.models import InsertModel
-from stock.common.utility import Filter
+from Common.utility import Filter
 
 class FinancialErrorLog(Repo):
     def __init__(self):

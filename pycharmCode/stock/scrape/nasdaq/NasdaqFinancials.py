@@ -1,8 +1,9 @@
-import urllib2, cookielib
-from stock.common.utility import Filter
-from stock.streams.models import InsertModel
+import urllib2
+
 from scrapy.selector import Selector
-import threading
+
+from Common.utility import Filter
+from pycharmCode.stock.streams.models import InsertModel
 
 
 class NasdaqFinancials():

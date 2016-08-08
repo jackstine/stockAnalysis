@@ -1,7 +1,8 @@
-from stock.repository import RepoI
-from stock.streams.mysql import DB
-from stock.common.utility import Time
-from stock.streams.models import Model
+from Common.utility import Time
+from pycharmCode.stock.repository import RepoI
+from pycharmCode.stock.streams.models import Model
+from pycharmCode.stock.streams.mysql import DB
+
 
 class NasdaqSummaryRepo(RepoI):
     def __init__(self):

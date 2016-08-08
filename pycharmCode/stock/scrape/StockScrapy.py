@@ -1,10 +1,13 @@
-from stock.repository.scrape import ScrapyErrorLog
-import time, os
+import os
+
 import scrapy
 from scrapy import signals
 from scrapy.xlib.pydispatch import dispatcher
-from stock.common.utility import Filter
-from stock.controllers.financials import FinancialController
+
+from Common.utility import Filter
+from pycharmCode.stock.controllers.financials import FinancialController
+from pycharmCode.stock.repository.scrape import ScrapyErrorLog
+
 
 class StockScrapy(scrapy.Spider):
 

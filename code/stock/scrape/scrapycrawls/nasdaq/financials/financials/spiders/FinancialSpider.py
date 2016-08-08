@@ -4,7 +4,7 @@ THIS_FILE_DIR = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentf
 DEFAULT_PATH = string.join(THIS_FILE_DIR.split("/")[:-7],"/")
 print DEFAULT_PATH
 sys.path.insert(1,DEFAULT_PATH)
-from stock.common.utility import Filter
+from Common.utility import Filter
 from stock.controllers.financials import FinancialController
 from stock.streams.models import InsertModel
 from stock.scrape import StockScrapy

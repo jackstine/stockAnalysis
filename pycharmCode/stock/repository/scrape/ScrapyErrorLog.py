@@ -1,6 +1,7 @@
-from stock.repository import ErrorRepo
-from stock.streams.models import InsertModel
-from stock.common.utility import Filter
+from Common.utility import Filter
+from pycharmCode.stock.repository import ErrorRepo
+from pycharmCode.stock.streams.models import InsertModel
+
 
 class ScrapyErrorLog(ErrorRepo):
     table = "ScrapyErrorLog"

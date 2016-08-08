@@ -1,9 +1,10 @@
-from stock.streams.mysql import DB, Ops
-from stock.streams.mysql.connections import Connections
-from stock.streams.models import Model, InsertModel
-from stock.streams.models import createDictFromModel
-from stock.repository.financials import CompletesRepo, FinancialErrorLog
-from stock.common.utility import Time
+from Common.utility import Time
+from pycharmCode.stock.repository.financials import CompletesRepo, FinancialErrorLog
+from pycharmCode.stock.streams.models import Model, InsertModel
+from pycharmCode.stock.streams.models import createDictFromModel
+from pycharmCode.stock.streams.mysql import DB
+from pycharmCode.stock.streams.mysql.connections import Connections
+
 
 class FinancialController:
     GOOGLE = CompletesRepo.GOOGLE

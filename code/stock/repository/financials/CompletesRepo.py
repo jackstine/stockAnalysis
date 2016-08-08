@@ -2,7 +2,7 @@ from stock.repository import RepoI
 from stock.repository.nasdaq import NasdaqReferenceRepository
 from stock.stockinfo.repos import IDSymbolRepo
 from stock.streams.models import Model
-from stock.common.utility import Time
+from Common.utility import Time
 
 #because the Completes are similar, we will only need the name to be different
 class CompletesRepo(RepoI):

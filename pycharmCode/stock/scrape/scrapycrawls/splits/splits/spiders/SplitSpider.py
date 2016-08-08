@@ -1,9 +1,10 @@
-import scrapy, os, string
+import os
+import scrapy
+import string
 
-from stock.common.utility import Filter
-from stock.stockinfo.api import StockInfoAPI
-from stock.streams.models import InsertModel
-from stock.streams.mysql import DB
+from pycharmCode.stock.stockinfo.api import StockInfoAPI
+from pycharmCode.stock.streams.models import InsertModel
+from pycharmCode.stock.streams.mysql import DB
 
 
 class SplitSpider(scrapy.Spider):

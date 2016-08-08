@@ -1,7 +1,7 @@
 import urllib2, subprocess
 from stock.streams.models import InsertModel
 from scrapy.selector import Selector
-from stock.common.utility import Filter
+from Common.utility import Filter
 
 
 class XECurrency:

@@ -1,6 +1,8 @@
-from ...scrape import BloombergCommodities
-from ...repository.daily import CommodityListingRepo
+from pycharmCode.temp.scrape import BloombergCommodities
+
+from pycharmCode.stock.repository.daily import CommodityListingRepo
 from ..InsertModels import *
+
 
 class BloombergCommoditiesController:
 

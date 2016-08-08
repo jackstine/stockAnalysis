@@ -1,5 +1,5 @@
 import csv, urllib2, requests,string,os,operator
-from stock.common.datastructure import NasdaqCompanyListingContainer
+from Common.datastructure import NasdaqCompanyListingContainer
 
 # has Symbol Name  LastSale  MarketCap  ADR TSO   IPOYear  Sector  Industry   SummaryQuote
 class NasdaqCompanyListing:

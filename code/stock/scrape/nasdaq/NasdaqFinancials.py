@@ -1,5 +1,5 @@
 import urllib2, cookielib
-from stock.common.utility import Filter
+from Common.utility import Filter
 from stock.streams.models import InsertModel
 from scrapy.selector import Selector
 import threading

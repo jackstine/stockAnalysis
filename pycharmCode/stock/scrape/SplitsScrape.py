@@ -1,7 +1,7 @@
 import urllib2
 import time, datetime
 from scrapy.selector import Selector
-from stock.streams.models import InsertModel
+from pycharmCode.stock.streams.models import InsertModel
 
 class SplitsScrape:
     def __init__(self):

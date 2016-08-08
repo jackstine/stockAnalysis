@@ -1,6 +1,6 @@
-from stock.stockinfo.models.IDSymbolModel import IDSymbolModel
-from stock.stockinfo.repos import IDSymbolRepo
-from stock.repository.nasdaq import NasdaqReferenceRepository
+from pycharmCode.stock.stockinfo.models.IDSymbolModel import IDSymbolModel
+from pycharmCode.stock.stockinfo.repos import IDSymbolRepo
+from pycharmCode.stock.repository.nasdaq import NasdaqReferenceRepository
 
 class StockInfoAPI:
     def __init__(self, stream):

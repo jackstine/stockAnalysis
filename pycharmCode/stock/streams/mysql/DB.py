@@ -1,10 +1,10 @@
 import MySQLdb,operator
 import string
-from stock.streams.mysql import DESCRIBE
-from stock.streams.mysql.statements import Insert, Select, Delete, Update, Where, LeftJoin
-from stock.streams.models import ModelBuilder, Model
-from stock.streams.mysql.Ops import Ops
-from stock.streams.mysql.connections import Connections
+from pycharmCode.stock.streams.mysql import DESCRIBE
+from pycharmCode.stock.streams.mysql.statements import Insert, Select, Delete, Update, Where, LeftJoin
+from pycharmCode.stock.streams.models import ModelBuilder, Model
+from pycharmCode.stock.streams.mysql.Ops import Ops
+from pycharmCode.stock.streams.mysql.connections import Connections
 
 class DB:
     """

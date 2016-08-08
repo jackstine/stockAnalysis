@@ -1,4 +1,4 @@
-from stock.repository import RepoI
+from pycharmCode.stock.repository import RepoI
 
 class TableRepo(RepoI):
 

@@ -1,6 +1,6 @@
 import FinancialModel as f
-
-
+import pandas as pd
+import math
 
 #transforms the financial model into the columns of the dataframe that have been calculated yet, because of
 #dependencies that are needed.  One example is using fields in the Income Statement
@@ -38,3 +38,27 @@ def transform_financials(fin):
     # Return on Invested Capital ROIC
     # Average Collection Period
     #
+#TODO  this termsBack is not complete,  need to fix it...
+def percentages(df, termsBack = 1, columns = None):
+    percentageDict = dict()
+    columns = columns if (columns != None) else df
+    dateColumns = df.index
+    for col in columns:
+        columnValues = df[col]
+        length = len(columnValues)
+        if (col != f.ID and col != f.DATE and col != f.SYMBOL):
+            # print columnValues
+            for index, value in enumerate(columnValues[:length - termsBack]):
+                termBackValue = columnValues[index + termsBack]
+                # print "%s     %s  sym  %s  on column  %s" % (value, termBackValue, symbol, col)
+                percentageValue = (value - termBackValue) / math.fabs(termBackValue)
+                date = str(dateColumns[index].year)
+                columnName = col + "_percentages_" + date
+                # print columnName
+                percentageDict[columnName] = percentageValue
+    return percentageDict
+
+def add_symbol(df, dictionary):
+    symbol = df.loc[df.index[0],f.SYMBOL].iloc[0,0]
+    dictionary["symbol"] = symbol
+    return symbol

@@ -1,6 +1,6 @@
 import sys
 sys.path.insert(1,"/home/jacob/Dropbox/Program/Stock/code/")
-from stock.datastructure import FinancialContainer
+from pycharmCode.stock.datastructure import FinancialContainer
 
 class GoogleFinState:
 	xpath=""

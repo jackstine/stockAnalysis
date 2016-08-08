@@ -1,5 +1,6 @@
 ID = "id"
 DATE = "date"
+SYMBOL = "symbol"
 
 # BALANCE SHEET FIELDS
 CASH_BALANCE = "cash_balance"

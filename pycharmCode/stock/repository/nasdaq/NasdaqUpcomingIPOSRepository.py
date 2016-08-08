@@ -1,6 +1,6 @@
-from stock.streams.models import Model
-from stock.streams.mysql import Ops
-from stock.repository.Repo import Repo
+from pycharmCode.stock.streams.models import Model
+from pycharmCode.stock.streams.mysql import Ops
+from pycharmCode.stock.repository.Repo import Repo
 
 class NasdaqUpcomingIPOSRepository(Repo):
     def __init__(self):

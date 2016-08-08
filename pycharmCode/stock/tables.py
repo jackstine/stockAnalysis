@@ -1,6 +1,6 @@
-from stock.streams.mysql import DB
-from stock.streams.mysql.connections import Connections
-from stock.streams.mysql.tables import CreateTables, DropTables
+from pycharmCode.stock.streams.mysql import DB
+from pycharmCode.stock.streams.mysql.connections import Connections
+from pycharmCode.stock.streams.mysql.tables import CreateTables, DropTables
 
 #NOTE if the command is in comments then it is not being used yet
 # there are still issues to reconfigure the scraping to adjust

@@ -7,5 +7,5 @@ class _Connection:
         self.db = db
 
 class Connections:
-    STOCK = _Connection("localhost", 'stock', 'stockaholic', 'stock')
+    STOCK = _Connection("127.0.0.1", 'stock', 'stockaholic', 'stock')
     STOCK_TEST = _Connection("localhost", 'stocktest', 'tester', 'stocktest')

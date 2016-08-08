@@ -2,6 +2,6 @@ class Config:
     """
         These are associated to the Google Stock Account
     """
-    email = "jacobstockprimary@gmail.com"
-    email_passwd = "stockaholic"
+    email = "WRONG EMAIL"
+    email_passwd = "WRONG PASSWORD"
     phoneNumber = "18503616563"

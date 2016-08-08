@@ -3,7 +3,7 @@ import time, os
 import scrapy
 from scrapy import signals
 from scrapy.xlib.pydispatch import dispatcher
-from stock.common.utility import Filter
+from Common.utility import Filter
 from stock.controllers.financials import FinancialController
 
 class StockScrapy(scrapy.Spider):

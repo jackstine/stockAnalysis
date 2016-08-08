@@ -1,8 +1,8 @@
-from stock.scrape.nasdaq import NasdaqDelisted
-from stock.controllers.InsertModels import *
-from stock.repository.nasdaq import NasdaqSuspensionRepository
+from pycharmCode.stock.scrape.nasdaq import NasdaqDelisted
+from pycharmCode.stock.controllers.InsertModels import *
+from pycharmCode.stock.repository.nasdaq import NasdaqSuspensionRepository
 from datetime import datetime
-from stock.streams.models.ModelAlgorithms import getDifference
+from pycharmCode.stock.streams.models.ModelAlgorithms import getDifference
 
 class NasdaqDelistedController:
 

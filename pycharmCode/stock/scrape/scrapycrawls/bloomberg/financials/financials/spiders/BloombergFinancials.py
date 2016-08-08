@@ -2,11 +2,11 @@
 import sys,os
 import datetime
 sys.path.insert(1, os.path.expanduser("~") + "/PycharmProjects/untitled/")
-from stock.utility import Filter, Time
-from stock.controllers.financials import FinancialController
-from stock.models import InsertModel
-from stock.repository.scrape import ScrapyErrorLog
-from stock.scrape import StockScrapy
+from pycharmCode.stock.utility import Filter, Time
+from pycharmCode.stock.controllers.financials import FinancialController
+from pycharmCode.stock.models import InsertModel
+from pycharmCode.stock.repository.scrape import ScrapyErrorLog
+from pycharmCode.stock.scrape import StockScrapy
 
 import scrapy
 from scrapy import signals

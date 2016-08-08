@@ -1,4 +1,4 @@
-from stock.repository import Repo
+from pycharmCode.stock.repository import Repo
 
 class CommodityListingRepo(Repo):
 

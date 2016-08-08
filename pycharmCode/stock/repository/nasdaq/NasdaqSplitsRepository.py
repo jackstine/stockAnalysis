@@ -1,4 +1,4 @@
-from stock.streams.models import Model
+from pycharmCode.stock.streams.models import Model
 
 class NasdaqSplitsRepository:
 

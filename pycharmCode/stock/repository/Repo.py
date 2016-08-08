@@ -1,6 +1,6 @@
-from stock.streams.models import Model
-from stock.streams.models.ModelAlgorithms import getPrimaryKeys, getDifference, getExisting
-from stock.streams.mysql import Ops
+from pycharmCode.stock.streams.models import Model
+from pycharmCode.stock.streams.models.ModelAlgorithms import getPrimaryKeys, getDifference, getExisting
+from pycharmCode.stock.streams.mysql import Ops
 from datetime import datetime, timedelta
 
 

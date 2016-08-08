@@ -1,4 +1,4 @@
-from stock.streams.mysql import DB
+from pycharmCode.stock.streams.mysql import DB
 
 def dropNasdaq():
     global db

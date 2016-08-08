@@ -1,7 +1,10 @@
-from scrapy.selector import Selector
-from stock.common.utility import Filter
-from stock.streams.models import InsertModel
 import urllib2
+
+from scrapy.selector import Selector
+
+from Common.utility import Filter
+from pycharmCode.stock.streams.models import InsertModel
+
 
 class NasdaqUpcomingIPOS:
     table = "NasdaqUpcomingIPOS"

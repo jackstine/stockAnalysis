@@ -1,5 +1,5 @@
 from scrapy.selector import Selector
-from stock.common.utility import Filter
+from Common.utility import Filter
 from stock.streams.models import InsertModel
 import urllib2
 

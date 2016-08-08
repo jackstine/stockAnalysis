@@ -1,6 +1,6 @@
 from stock.repository import ErrorRepo
 from stock.streams.models import InsertModel
-from stock.common.utility import Filter
+from Common.utility import Filter
 
 class ScrapyErrorLog(ErrorRepo):
     table = "ScrapyErrorLog"

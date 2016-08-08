@@ -1,5 +1,5 @@
-from stock.repository import RepoI
-from stock.streams.models import Model
+from pycharmCode.stock.repository import RepoI
+from pycharmCode.stock.streams.models import Model
 
 class NasdaqReferenceRepository(RepoI):
     STOCK_COLUMN = 0

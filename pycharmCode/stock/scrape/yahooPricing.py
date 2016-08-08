@@ -1,12 +1,11 @@
-import urllib
 import csv
-import time
-import MySQLdb
 import datetime
-import threading
+import urllib
 
-from stock.stockinfo.api import StockInfoAPI
-from stock.streams.mysql import DB
+import MySQLdb
+from pycharmCode.stock.stockinfo.api import StockInfoAPI
+
+from pycharmCode.stock.streams.mysql import DB
 
 #CREATE TABLE yahooCSV (symbol VARCHAR(10) ,date DATE,closePrice DECIMAL(13,4),todaysHigh DECIMAL(13,4)
 #	,todaysLow DECIMAL(13,4),volume BIGINT UNSIGNED,adjClose DECIMAL(13,4), INDEX(symbol), INDEX(date))
@@ -18,7 +17,7 @@ def updatingDatabase(sourceCSV,stockID):
     symbol = stockID.symbol
     id = stockID.id
     try:
-    	connection=MySQLdb.connect(host='localhost',passwd='stockaholic',user='stock',db='stock')
+    	connection=MySQLdb.connect(host='127.0.0.1',passwd='stockaholic',user='stock',db='stock')
     	cur=connection.cursor()
         for index,row in enumerate(sourceCSV):
             if index==0:
@@ -91,9 +90,10 @@ def main():
         api = StockInfoAPI(db)
         stocks = api.getAllStockIDInfo()
         for index,symbol in enumerate(stocks):
-            print 'doing symbol %s , %s of %s' % (symbol.id,symbol.symbol,len(stocks))
-            if isGoodSymbol(symbol.symbol):
-                connectAndFetch(symbol)
+            if (int(symbol.id) >= 2115):
+                print 'doing symbol %s , %s of %s' % (symbol.id,symbol.symbol,len(stocks))
+                if isGoodSymbol(symbol.symbol):
+                    connectAndFetch(symbol)
     except MySQLdb.Error as e:
         print e[0]
         print e[1]

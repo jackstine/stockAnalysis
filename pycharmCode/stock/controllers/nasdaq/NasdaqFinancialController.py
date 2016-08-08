@@ -1,6 +1,6 @@
-from stock.streams.mysql import DB, Ops
-from stock.streams.mysql.connections import Connections
-from stock.streams.models import Model
+from pycharmCode.stock.streams.mysql import DB, Ops
+from pycharmCode.stock.streams.mysql.connections import Connections
+from pycharmCode.stock.streams.models import Model
 
 class NasdaqFinancialController:
 

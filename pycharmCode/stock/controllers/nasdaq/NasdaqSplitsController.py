@@ -1,7 +1,7 @@
-from stock.scrape.nasdaq import NasdaqSplits
-from stock.controllers.InsertModels import *
-from stock.streams.models.ModelAlgorithms import getDifference
-from stock.repository.nasdaq import NasdaqSplitsRepository
+from pycharmCode.stock.scrape.nasdaq import NasdaqSplits
+from pycharmCode.stock.controllers.InsertModels import *
+from pycharmCode.stock.streams.models.ModelAlgorithms import getDifference
+from pycharmCode.stock.repository.nasdaq import NasdaqSplitsRepository
 
 class NasdaqSplitsController():
 

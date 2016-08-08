@@ -1,10 +1,14 @@
-import sys, re, os
-from stock.controllers.nasdaq import NasdaqSummaryController
-from stock.common.utility import Filter
-import string,scrapy,os,datetime
-from ..Quote import Quote
-import operator
+import os
+import re
+import scrapy
+import string
+
 from scrapy.selector import Selector
+
+from Common.utility import Filter
+from pycharmCode.stock.controllers.nasdaq import NasdaqSummaryController
+from ..Quote import Quote
+
 
 #TODO make sure that the Summary Quote has no errors
 #TODO make error checking software,  that makes sure that I am getting the right data
@@ -34,13 +38,13 @@ class QuoteSpider(scrapy.Spider):
         comment = response.xpath("//div[@class='genTable thin']/table/tbody/comment()").re(regex)[3]
         commentSel = Selector(text = comment, type ="html")
         item["TotalSharesOutstanding"] = self.f.fixListedData(commentSel.xpath("//td[@align = 'right']/text()").extract())
-        print item["TotalSharesOutstanding"]
+        #print item["TotalSharesOutstanding"]
         item["Symbol"] = self.f.fixListedData(response.xpath('//div[@class="qbreadcrumb"]/span/b/text()').extract())
-        print item["Symbol"]
+        #print item["Symbol"]
         item["Exchange"] = self.f.fixListedData(response.xpath('//div[@id = "qwidget-sector-wrap"]/span/text()').extract())
-        print item["Exchange"]
+        #print item["Exchange"]
         item["Industry"] = self.f.fixListedData(response.xpath('//div[@id = "qwidget-sector-wrap"]/span/a/text()').extract())
-        print item["Industry"]
+        #print item["Industry"]
         item["LastSale"] = self.f.fixListedData(response.xpath('//div[@id="qwidget_lastsale"]/text()').extract())
         treePath=response.xpath('//div[@class="genTable thin"]/table/tbody/tr')
         for sel in treePath:
@@ -48,15 +52,15 @@ class QuoteSpider(scrapy.Spider):
             header = self._fixHeader(sel.xpath('td[1]/text()').extract())
             otherHeader = self._fixOtherHeader(sel.xpath('td/a/text()').extract())
             header = self._collectHeader(header,otherHeader)
-            print header + '   ' + data
+            #print header + '   ' + data
             item[header] = data
         highLowVolume = treePath.xpath('./td[@align = "right"]/label/text()').extract()   #<<this pulls the high low and the share volume of the day
         item["TodayHigh"] = self.f.fixNonListedData(highLowVolume[0])[1:]
-        print item["TodayHigh"]
+        #print item["TodayHigh"]
         item["TodayLow"] = self.f.fixNonListedData(highLowVolume[1])[1:]
-        print item["TodayLow"]
+        #print item["TodayLow"]
         item["Volume"] = self.f.fixNonListedData(highLowVolume[2])
-        print item["Volume"]
+        #print item["Volume"]
         return item
 
     def closed(self,reason):

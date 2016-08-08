@@ -3,7 +3,7 @@ from stock.streams.mysql.connections import Connections
 from stock.streams.models import Model, InsertModel
 from stock.streams.models import createDictFromModel
 from stock.repository.financials import CompletesRepo, FinancialErrorLog
-from stock.common.utility import Time
+from Common.utility import Time
 
 class FinancialController:
     GOOGLE = CompletesRepo.GOOGLE

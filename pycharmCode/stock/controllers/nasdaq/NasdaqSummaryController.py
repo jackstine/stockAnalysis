@@ -1,8 +1,8 @@
-from stock.stockinfo.api import StockInfoAPI
-from stock.streams.mysql import DB
-from stock.streams.models import Model
-from stock.streams.mysql.connections import Connections
-from stock.streams.mysql import Ops
+from pycharmCode.stock.stockinfo.api import StockInfoAPI
+from pycharmCode.stock.streams.mysql import DB
+from pycharmCode.stock.streams.models import Model
+from pycharmCode.stock.streams.mysql.connections import Connections
+from pycharmCode.stock.streams.mysql import Ops
 import datetime, string, os
 
 class NasdaqSummaryController:

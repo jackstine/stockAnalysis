@@ -1,10 +1,10 @@
 import sys, os
 sys.path.insert(1,os.path.expanduser("~") + "/Dropbox/Programs/Stock/code/")
-from stock.utility import Filter
-from stock.controllers.financials import FinancialController
-from stock.models import InsertModel
-from stock.repository.scrape import ScrapyErrorLog
-from stock.scrape import StockScrapy
+from pycharmCode.stock.utility import Filter
+from pycharmCode.stock.controllers.financials import FinancialController
+from pycharmCode.stock.models import InsertModel
+from pycharmCode.stock.repository.scrape import ScrapyErrorLog
+from pycharmCode.stock.scrape import StockScrapy
 
 from financials.spiders.state import GoogleFinState, ABalanceState, ACashState, AIncomeState, QBalanceState, QCashState, QIncomeState
 import operator,os

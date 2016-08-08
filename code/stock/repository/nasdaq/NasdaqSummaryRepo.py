@@ -1,6 +1,6 @@
 from stock.repository import RepoI
 from stock.streams.mysql import DB
-from stock.common.utility import Time
+from Common.utility import Time
 from stock.streams.models import Model
 
 class NasdaqSummaryRepo(RepoI):

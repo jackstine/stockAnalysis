@@ -1,5 +1,5 @@
-from stock.repository import Repo
-from stock.streams.mysql import DB
+from pycharmCode.stock.repository import Repo
+from pycharmCode.stock.streams.mysql import DB
 import os, sys
 
 class ErrorRepo:

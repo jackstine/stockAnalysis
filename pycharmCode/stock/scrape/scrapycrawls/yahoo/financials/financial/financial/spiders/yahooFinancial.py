@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 import sys, datetime, os
 sys.path.insert(1, os.path.expanduser("~") + "/Dropbox/Programs/Stock/code/")
-from stock.utility import Filter
-from stock.controllers.financials import FinancialController
-from stock.models import InsertModel
-from stock.scrape import StockScrapy
+from pycharmCode.stock.utility import Filter
+from pycharmCode.stock.controllers.financials import FinancialController
+from pycharmCode.stock.models import InsertModel
+from pycharmCode.stock.scrape import StockScrapy
 
 class YahoofinancialSpider(StockScrapy):
     name = "yahooFinancial"

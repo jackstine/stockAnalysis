@@ -1,8 +1,11 @@
 import urllib2
-from stock.common.utility import Filter
-from scrapy.selector import Selector
-from stock.streams.models import InsertModel
 from datetime import datetime
+
+from scrapy.selector import Selector
+
+from Common.utility import Filter
+from pycharmCode.stock.streams.models import InsertModel
+
 
 class BloombergCommodities:
     tablePrice = "CommoditiesPrice"

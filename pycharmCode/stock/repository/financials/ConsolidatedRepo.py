@@ -1,5 +1,5 @@
-from stock.repository import RepoI
-from stock.streams.mysql import DB
+from pycharmCode.stock.repository import RepoI
+from pycharmCode.stock.streams.mysql import DB
 
 class ConsolidatedRepo(RepoI):
 

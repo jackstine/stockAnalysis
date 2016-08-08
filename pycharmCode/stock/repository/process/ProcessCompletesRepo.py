@@ -1,6 +1,6 @@
-from stock.repository import Repo
-from stock.streams.mysql import DB
-from stock.streams.mysql.connections import Connections
+from pycharmCode.stock.repository import Repo
+from pycharmCode.stock.streams.mysql import DB
+from pycharmCode.stock.streams.mysql.connections import Connections
 
 
 class ProcessCompletesRepo(Repo):

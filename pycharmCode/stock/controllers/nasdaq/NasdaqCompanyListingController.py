@@ -1,11 +1,11 @@
-from stock.scrape.nasdaq import NasdaqCompanyListing
-from stock.streams.models import InsertModel
-import string, time
-from stock.streams.models.ModelAlgorithms import getStringModels
-from stock.repository.nasdaq import NasdaqReferenceRepository, NasdaqMarketInfoRepository, NasdaqCompanyListingRepository
-from stock.stockinfo.repos import IDSymbolRepo
-from stock.common.datastructure import KeyValue
-from stock.stockinfo.api import StockInfoAPI
+import string
+
+from Common.datastructure import KeyValue
+from pycharmCode.stock.scrape.nasdaq import NasdaqCompanyListing
+from pycharmCode.stock.stockinfo.api import StockInfoAPI
+from pycharmCode.stock.stockinfo.repos import IDSymbolRepo
+from pycharmCode.stock.streams.models import InsertModel
+from pycharmCode.stock.streams.models.ModelAlgorithms import getStringModels
 
 
 class NasdaqCompanyListingController:

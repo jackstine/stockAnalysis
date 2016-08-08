@@ -1,7 +1,9 @@
-from ...repository.alerts import StrikePriceRepo
-from ...streams.mysql import DB
-from ...scrape.ScrapyAPI import *
+from pycharmCode.temp.repository.alerts import StrikePriceRepo
+from pycharmCode.temp.streams.mysql import DB
 from ...utility.Texting import *
+
+from pycharmCode.stock.scrape.ScrapyAPI import *
+
 
 class StrikePriceController:
     def __init__(self):

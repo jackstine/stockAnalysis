@@ -2,7 +2,7 @@ from . import GoogleFinState
 from financials import BalanceItem
 import sys
 sys.path.insert(1,"/home/jacob/Dropbox/Program/Stock/code/")
-from stock.datastructure import FinancialContainer
+from pycharmCode.stock.datastructure import FinancialContainer
 
 class QBalanceState(GoogleFinState):
     xpath='//div[@id="balinterimdiv"]/table[@id="fs-table"]'

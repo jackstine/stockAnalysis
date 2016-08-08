@@ -1,5 +1,5 @@
 import urllib2
-from stock.common.utility import Filter
+from Common.utility import Filter
 from scrapy.selector import Selector
 from stock.streams.models import InsertModel
 from datetime import datetime

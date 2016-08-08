@@ -1,6 +1,8 @@
-from ...scrape import XECurrency
+from pycharmCode.temp.scrape import XECurrency
+
+from pycharmCode.stock.repository.daily import XECurrencyPricingRepository, XECurrencyListingRepository
 from ..InsertModels import *
-from ...repository.daily import XECurrencyPricingRepository, XECurrencyListingRepository
+
 
 class XECurrencyController:
     def __init__(self, stream):

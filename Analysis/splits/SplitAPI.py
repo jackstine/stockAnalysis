@@ -13,3 +13,5 @@ def get_split_from_ids(ids):
         splits.append(get_split_from_id(id))
     return splits
 
+def has_splits(id):
+    return get_split_from_id(id).shape[0] != 0

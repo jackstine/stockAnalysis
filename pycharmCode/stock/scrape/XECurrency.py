@@ -1,7 +1,9 @@
-import urllib2, subprocess
-from stock.streams.models import InsertModel
+import subprocess
+
 from scrapy.selector import Selector
-from stock.common.utility import Filter
+
+from Common.utility import Filter
+from pycharmCode.stock.streams.models import InsertModel
 
 
 class XECurrency:

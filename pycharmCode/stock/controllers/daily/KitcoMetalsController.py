@@ -1,6 +1,8 @@
-from ...scrape import KitcoMetals
 from ...models import Model
 from ...utility import Filter
+
+from pycharmCode.stock.scrape import KitcoMetals
+
 
 class KitcoMetalsController:
 

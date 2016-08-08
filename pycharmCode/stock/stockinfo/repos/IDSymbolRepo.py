@@ -1,5 +1,5 @@
-from stock.repository import RepoI
-from stock.streams.models import InsertModel, Model
+from pycharmCode.stock.repository import RepoI
+from pycharmCode.stock.streams.models import InsertModel, Model
 
 class IDSymbolRepo(RepoI):
     STOCK_COLUMN = 1

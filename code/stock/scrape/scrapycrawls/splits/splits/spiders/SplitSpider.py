@@ -1,6 +1,6 @@
 import scrapy, os, string
 
-from stock.common.utility import Filter
+from Common.utility import Filter
 from stock.stockinfo.api import StockInfoAPI
 from stock.streams.models import InsertModel
 from stock.streams.mysql import DB

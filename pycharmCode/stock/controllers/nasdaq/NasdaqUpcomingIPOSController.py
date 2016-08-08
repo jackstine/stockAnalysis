@@ -1,7 +1,7 @@
-from stock.controllers.InsertModels import *
-from stock.scrape.nasdaq import NasdaqUpcomingIPOS
-from stock.streams.models.ModelAlgorithms import getDifference
-from stock.repository.nasdaq import NasdaqUpcomingIPOSRepository
+from pycharmCode.stock.controllers.InsertModels import *
+from pycharmCode.stock.scrape.nasdaq import NasdaqUpcomingIPOS
+from pycharmCode.stock.streams.models.ModelAlgorithms import getDifference
+from pycharmCode.stock.repository.nasdaq import NasdaqUpcomingIPOSRepository
 
 
 class NasdaqUpcomingIPOSController:

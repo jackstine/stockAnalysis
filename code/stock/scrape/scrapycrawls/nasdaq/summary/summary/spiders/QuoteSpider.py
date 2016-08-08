@@ -1,6 +1,6 @@
 import sys, re, os
 from stock.controllers.nasdaq import NasdaqSummaryController
-from stock.common.utility import Filter
+from Common.utility import Filter
 import string,scrapy,os,datetime
 from ..Quote import Quote
 import operator
