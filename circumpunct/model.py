@@ -1,4 +1,5 @@
 from Common.U import getFromDict as vjson
+import datetime
 
 class WatchList:
     def __init__(self, json):
@@ -16,21 +17,34 @@ class WatchList:
 
     def setSummary(self,summary):
         self.summary = summary
+        self.symbol = summary.symbol
+        self.price = summary.price
 
     def canBuy(self):
-        return self.summary.price <= self.buyPrice
+        return self.price <= self.buyPrice
 
     def isLow(self):
-        return self.summary.price <= self.targetPriceLow
+        return self.price <= self.targetPriceLow
 
     def isHigh(self):
-        return self.summary.price >= self.targetPriceHigh
+        return self.price >= self.targetPriceHigh
 
     def getSymbol(self):
-        return self.summary.symbol
+        return self.symbol
+
+    def setPriceModel(self, pricemodel):
+        self.priceModel = pricemodel
+        self.symbol = pricemodel.symbol
+        self.price = pricemodel.price
 
 class Stock:
     def __init__(self, json):
         self.isDelisted = vjson(json, "isDelisted")
         self.ID = vjson(json,"Id")
         self.symbol = vjson(json, "currentSymbol")
+
+class StockData:
+    def __init__(self, ID, price):
+        self.stockId = ID
+        self.price = price
+        self.date = datetime.datetime.now()

@@ -18,6 +18,11 @@ def getStocks():
         stocks.append(Stock(i))
     return stocks
 
+def updateStockData(stockData):
+    response = requests.post("https://circumpunct.outsystemscloud.com/StockOpinions/rest/Stock/updateStockPrice", auth=getBasicAuth(),
+                             json = {"StockId":stockData.stockId, "price":stockData.price, "date":str(stockData.date)})
+    return response
+
 def insertSymbol(symbol):
     response = requests.put('https://circumpunct.outsystemscloud.com/StockOpinions/rest/Stock/insertSymbol', auth=getBasicAuth(), json = {"symbol":symbol})
     return response

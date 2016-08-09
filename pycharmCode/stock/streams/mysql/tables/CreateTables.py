@@ -25,6 +25,10 @@ class CreateTables:
     def hasNoTable(self, table):
         return self.tables.hasNoTable(table)
 
+    def createSystemTable(self):
+        if (self.hasNoTable("SystemConfigurations")):
+            self.mysql.commitExecute(self.table + "SystemConfigurations (keyValue VARCHAR(100), Value VARCHAR(400), PRIMARY KEY (keyValue))")
+
     def createIDSymbol(self):
         if (self.hasNoTable("IDSymbol")):
             self.mysql.commitExecute(str(self.table + "IDSymbol (id INT NOT NULL AUTO_INCREMENT," + self.symbolNotNull
