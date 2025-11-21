@@ -4,4 +4,4 @@ class Config:
     """
     email = "jacobstockprimary@gmail.com"
     email_passwd = "stockaholic"
-    phoneNumber = "18503616563"
+    phoneNumber = ""
